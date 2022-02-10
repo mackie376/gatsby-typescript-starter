@@ -18,7 +18,18 @@
     "url": "https://github.com/mackie376/gatsby-typescript-starter/issues",
     "email": "mackie@beehive-dev.com"
   },
-  "scripts": {},
-  "dependences": {},
-  "devDependencies": {}
+  "scripts": {
+    "build": "ts-node ./node_modules/.bin/gatsby build",
+    "develop": "ts-node ./node_modules/.bin/gatsby develop -H 0.0.0.0",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.7.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  }
 }

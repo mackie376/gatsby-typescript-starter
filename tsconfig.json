@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "CommonJS",
+    "lib": [
+      "DOM",
+      "ES2017"
+    ],
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "typeRoots": [
+      "./src/@types",
+      "./node_modules/@types"
+    ],
+    "moduleResolution": "Node",
+    "baseUrl": "."
+  },
+  "include": [
+    "./src/**/*",
+    "./gatsby-*"
+  ]
+}

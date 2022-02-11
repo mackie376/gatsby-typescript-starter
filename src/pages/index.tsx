@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { useSiteMetadata } from '../hooks';
-import { GlobalStyle } from '../styles';
+import { useSiteMetadata } from '@hooks';
+import { GlobalStyle } from '@styles';
 
 const IndexPage: React.FC = () => {
   const meta = useSiteMetadata();

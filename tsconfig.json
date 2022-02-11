@@ -18,7 +18,12 @@
       "./node_modules/@types"
     ],
     "moduleResolution": "Node",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@*": [
+        "src/*"
+      ]
+    }
   },
   "include": [
     "./src/**/*",

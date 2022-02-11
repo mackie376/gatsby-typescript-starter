@@ -17,6 +17,16 @@ const config: GatsbyConfig = {
         path: path.resolve(__dirname, 'src', 'images'),
       },
     },
+    {
+      resolve: 'gatsby-plugin-alias-imports',
+      options: {
+        alias: {
+          '@hooks': path.resolve(__dirname, 'src', 'hooks'),
+          '@styles': path.resolve(__dirname, 'src', 'styles'),
+        },
+        extensions: ['js', 'jsx', 'ts', 'tsx'],
+      },
+    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-emotion',
     {

@@ -11,6 +11,15 @@ const config: GatsbyConfig = {
   pathPrefix: process.env.PATH_PREFIX || '',
   plugins: [
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: path.resolve(__dirname, 'src', 'images'),
+      },
+    },
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-emotion',
+    {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: ['Noto Sans JP:400,700,900'],
@@ -18,6 +27,7 @@ const config: GatsbyConfig = {
       },
     },
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -30,6 +40,16 @@ const config: GatsbyConfig = {
         icon: path.resolve(__dirname, 'src', 'images', 'icon.png'),
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.beehive-dev.com',
+        sitemap: 'https://www.beehive-dev.com/sitemap.xml',
+      },
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-typegen',
       options: {

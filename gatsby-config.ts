@@ -11,6 +11,14 @@ const config: GatsbyConfig = {
   pathPrefix: process.env.PATH_PREFIX || '',
   plugins: [
     {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: ['Noto Sans JP:400,700,900'],
+        display: 'swap',
+      },
+    },
+    'gatsby-plugin-react-helmet',
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-typescript-starter',

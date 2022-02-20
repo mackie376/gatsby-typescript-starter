@@ -73,6 +73,7 @@
       }
     ],
     "react/jsx-props-no-spreading": "off",
+    "react/no-danger": 0,
     "react/prop-types": "off"
   },
   "settings": {

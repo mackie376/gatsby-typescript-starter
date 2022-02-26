@@ -51,7 +51,6 @@ const GlobalStyle: React.FC = (props) => (
         },
         p: {
           margin: '0.5rem 0',
-          textAlign: 'center',
           wordBreak: 'break-all',
         },
         a: {

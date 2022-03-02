@@ -1,4 +1,3 @@
-import path from 'path';
 import { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
@@ -14,15 +13,16 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: path.resolve(__dirname, 'src', 'images'),
+        path: 'src/images',
+        // path: path.resolve(__dirname, 'src', 'images'),
       },
     },
     {
       resolve: 'gatsby-plugin-alias-imports',
       options: {
         alias: {
-          '@hooks': path.resolve(__dirname, 'src', 'hooks'),
-          '@styles': path.resolve(__dirname, 'src', 'styles'),
+          '@hooks': 'src/hooks',
+          '@styles': 'src/styles',
         },
         extensions: ['js', 'jsx', 'ts', 'tsx'],
       },
@@ -47,7 +47,7 @@ const config: GatsbyConfig = {
         background_color: '#fff',
         theme_color: '#000',
         display: 'minimal-ui',
-        icon: path.resolve(__dirname, 'src', 'images', 'icon.png'),
+        icon: 'src/images/icon.png',
       },
     },
     {
@@ -63,7 +63,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-typegen',
       options: {
-        outputPath: path.resolve(__dirname, 'src', '@types', 'gatsby-types.d.ts'),
+        outputPath: 'src/@types/gatsby-types.d.ts',
       },
     },
   ],
